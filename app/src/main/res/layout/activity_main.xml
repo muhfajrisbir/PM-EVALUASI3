@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/namaEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:hint="Masukkan Nama"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/stambukEditText"
+        app:layout_constraintTop_toBottomOf="@+id/stambukEditText" />
+
+    <EditText
+        android:id="@+id/stambukEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="37dp"
+        android:ems="10"
+        android:hint="Masukkan Stambuk"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/angkatanSpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/namaEditText" />
+
+    <RadioGroup
+        android:id="@+id/programStudyRadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="13dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <RadioButton
+            android:id="@+id/sistemInformasiRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sistem Informasi" />
+
+        <RadioButton
+            android:id="@+id/teknikInformatikaRadioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Teknik Informatika" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/badanEksekutifMahasiswaCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:text="Badan Eksekutif Mahasiswa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <CheckBox
+        android:id="@+id/olahragaCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Olahraga"
+        app:layout_constraintStart_toStartOf="@+id/jurnalistikCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/jurnalistikCheckBox" />
+
+    <CheckBox
+        android:id="@+id/kesenianCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kesenian"
+        app:layout_constraintStart_toStartOf="@+id/kewirausahaanCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/kewirausahaanCheckBox" />
+
+    <CheckBox
+        android:id="@+id/kewirausahaanCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kewirausahaan"
+        app:layout_constraintStart_toStartOf="@+id/penulisanKaryaIlmiahCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/penulisanKaryaIlmiahCheckBox" />
+
+    <CheckBox
+        android:id="@+id/penulisanKaryaIlmiahCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Penulisan Karya Ilmiah"
+        app:layout_constraintStart_toStartOf="@+id/badanEksekutifMahasiswaCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/badanEksekutifMahasiswaCheckBox" />
+
+    <CheckBox
+        android:id="@+id/jurnalistikCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jurnalistik"
+        app:layout_constraintStart_toStartOf="@+id/kesenianCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/kesenianCheckBox" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="23dp"
+        android:hint="Minat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/programStudyRadioGroup" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:hint="Program Studi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/angkatanSpinner" />
+
+    <Button
+        android:id="@+id/button"
+        android:onClick="Result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="30dp"
+        android:text="TAMPILKAN RINGKASAN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
